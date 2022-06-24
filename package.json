@@ -1,0 +1,14 @@
+{
+  "name": "dynder",
+  "version": "1.0.0",
+  "description": "To serve custom html files, which are dynamically generated on each request",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tauksun",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.0.0"
+  }
+}
