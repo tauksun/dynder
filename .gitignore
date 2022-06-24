@@ -1,3 +1,4 @@
 .env
 node_modules
-dist
+#for publishing npm package
+dynder 
