@@ -56,47 +56,47 @@ const htmlPage = dynder({
 
 
 ```sh
-const path = require('path')
+const path = require("path");
 
 // Express HTTP Server
-const express = require('express');
-const app = express()
+const express = require("express");
+const app = express();
 
 // Load Dynder
-const {dynder} = require('dynder');
-
+const { dynder } = require("dynder");
 
 // Example Route
-app.get('/',(req,res)=>{
-    
-    // Date 
-    const date = new Date().toLocaleString();
-    
-    // dynder data
-    const filePath = path.resolve(__dirname,'./index.html');
-    const mapping = {
-        exampleHeading:'This is heading from server',
-        examplePara:"I am para injected by server",
-        exampleImage:"https://i.picsum.photos/id/237/536/354.jpg?hmac=i0yVXW1ORpyCZpQ-CknuyV-jbtU7_x9EBQVhvT5aRr0",
-        exampleDiv:`<div><h2>Date : ${date}</h2></div>`
-    }
-    const serveFromMemory=true;
+app.get("/", (req, res) => {
+  // Date
+  const date = new Date().toLocaleString();
 
+  // dynder data
+  const filePath = path.resolve(__dirname, "./index.html");
+  const mapping = {
+    exampleHeading: "This is heading from server",
+    examplePara: "I am para injected by server",
+    exampleImage:
+      "https://i.picsum.photos/id/237/536/354.jpg?hmac=i0yVXW1ORpyCZpQ-CknuyV-jbtU7_x9EBQVhvT5aRr0",
+    exampleDiv: `<div><h2>Date : ${date}</h2></div>`,
+  };
+  const serveFromMemory = true;
 
-    // Call dynder
-    const customHTML = dynder({filePath,mapping,serveFromMemory});
+  // Call dynder
+  const customHTML = dynder({ filePath, mapping, serveFromMemory });
 
-    // Set content-type header
-    res.setHeader('content-type','text/html');
+  // Set content-type header
+  res.setHeader("content-type", "text/html");
 
-    // Send data 
-    res.send(customHTML).end();
-})
+  // Send data
+  res.send(customHTML).end();
+});
 
-app.listen(3000,()=>console.log('Running on 3000'))
+app.listen(3000, () => console.log("Running on 3000"));
+
 ```
 > Result : 
-![imgage](https://i.postimg.cc/cL3yjdYP/dynder.jpg)
+
+- ![imgage](https://i.postimg.cc/cL3yjdYP/dynder.jpg)
 
 ## License
 
