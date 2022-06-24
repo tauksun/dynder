@@ -96,7 +96,7 @@ app.listen(3000, () => console.log("Running on 3000"));
 ```
 > Result : 
 
-- ![imgage](https://i.postimg.cc/cL3yjdYP/dynder.jpg)
+ ![imgage](https://i.postimg.cc/cL3yjdYP/dynder.jpg)
 
 ## License
 
